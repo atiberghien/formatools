@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1cm
+        }
+
+        @media print {
+            body {
+                font-size: 10px;
+            }
+
+            hr {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% for content in contents %}
+    <h1>plop #{{forloop.counter}}/{{contents|length}}</h1>
+    {% for header, value in content.items %}
+    <h4>{{header}}</h4>
+    <p>
+       {{value}} 
+    </p>
+    {% endfor %}
+    <hr />
+    {% endfor %}
+</body>
+
+</html>
