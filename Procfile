@@ -1,1 +1,1 @@
-web: gunicorn formatools.wsgi.py
+web: gunicorn formatools.wsgi
