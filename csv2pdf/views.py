@@ -17,6 +17,7 @@ class CSV2PDFFormView(WeasyTemplateResponseMixin, FormView):
         
         form = context["form"]
         headers = []
+        context["page_label"] = form.cleaned_data["page_label"]
         context["contents"] = []
         if form.is_valid():
             f = io.StringIO(form.cleaned_data["csv_file"].read().decode('utf-8'))
