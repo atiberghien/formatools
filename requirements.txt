@@ -7,7 +7,7 @@ cffi==1.12.3
 chardet==3.0.4
 cssselect2==0.2.1
 defusedxml==0.6.0
-Django==2.2.2
+Django==2.2.8
 django-bootstrap4==0.0.8
 django-extensions==2.1.9
 django-weasyprint==0.5.4
